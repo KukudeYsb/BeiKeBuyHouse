@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    username: root
+    password: 021028qwe
+    url: jdbc:mysql://localhost:3306/buyhome?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  main:
+    banner-mode: off
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: 100
+
+# mp日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    banner: false
+
+# 修改端口号
+server:
+  port: 8088
+
+
